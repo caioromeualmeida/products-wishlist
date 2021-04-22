@@ -32,6 +32,8 @@ PASSWORD: password <br>
 
 3. Para consumir a API, primeiro é necessário fazer uma requisição POST ao /login passando o token de acesso, conforme documentação da collection. Será retornado um token que deverá ser passado no header das próximas requisições.
 
+Obs: Serão gerados dois esquemas no mongo. Um será utilizado na etapa de testes e o outro conforme as requisições. Caso necessite alterar algo, há um application.properties e application-test.properties nas pastas do projeto.
+
 
 **Documentação do POSTMAN com as collections inclusas.**  <br>
 https://documenter.getpostman.com/view/4512599/TzJvexBz    <br>
