@@ -1,0 +1,19 @@
+version: "3.1"
+
+services:
+
+  cache:
+    image: redis:6.2.1-buster
+    container_name: wishlist-cache
+    ports:
+      - 6379:6379
+
+  db:
+    image: mongo:4.0.24-xenial
+    container_name: wishlist-db
+    restart: always
+    ports:
+      - 27017:27017    
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
